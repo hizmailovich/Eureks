@@ -8,4 +8,4 @@ FROM eclipse-temurin:19
 WORKDIR usr/src/app
 COPY --from=build /target/*.jar eureka.jar
 EXPOSE 8761
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "eureka.jar"]
