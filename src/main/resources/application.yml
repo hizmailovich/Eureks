@@ -6,6 +6,10 @@ spring:
     name: eureka
 
 eureka:
+  instance:
+    hostname: ${EUREKA_NAME}.eureka
   client:
     register-with-eureka: false
     fetch-registry: false
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_ADDRESS}
