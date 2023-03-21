@@ -2,12 +2,12 @@ server:
   port: 8761
 
 spring:
+  config:
+    import: optional:file:.env[.properties]
   application:
     name: eureka
 
 eureka:
-  instance:
-    hostname: ${EUREKA_NAME}.eureka
   client:
     register-with-eureka: false
     fetch-registry: false
